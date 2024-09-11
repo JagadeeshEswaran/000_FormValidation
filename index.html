@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="styles.css" />
+
+		<title>Form Validation</title>
+	</head>
+	<body>
+		<div class="form_container">
+			<form id="form">
+				<h1>Sign Up Now</h1>
+
+				<div class="form_group">
+					<label for="fullName">Your Full Name</label>
+					<input
+						type="text"
+						name="fullName"
+						id="fullName"
+						placeholder="Enter your Fullname"
+						required
+						minlength="10"
+						maxlength="100" />
+				</div>
+
+				<div class="form_group">
+					<label for="phone">Contact No</label>
+					<input
+						type="tel"
+						name="phone"
+						id="phone"
+						placeholder="555-555-5555"
+						required
+						pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+						minlength="12"
+						maxlength="12" />
+				</div>
+
+				<div class="form_group">
+					<label for="username"> Username </label>
+					<input
+						type="text"
+						name="username"
+						id="username"
+						placeholder="Type your username"
+						required
+						minlength="8"
+						maxlength="15"
+						autocomplete="username" />
+				</div>
+
+				<div class="form_group">
+					<label for="password">Password</label>
+					<input
+						type="password"
+						id="password"
+						placeholder="Create password (Min. 8 Characters)"
+						required
+						pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+						title="Please include 1 Uppercase Alphabet, 1 Lowercase Alphabet and 1 Number"
+						autocomplete="new-password" />
+				</div>
+
+				<div class="form_group">
+					<label for="cnfPassword">Confirm Password</label>
+					<input
+						type="password"
+						name="password"
+						id="cnfPassword"
+						placeholder="Confirm your Password"
+						required
+						pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+						autocomplete="new-password" />
+				</div>
+
+				<div class="form_group">
+					<label for="email">Email ID</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Type your email"
+						required />
+				</div>
+
+				<div class="form_group">
+					<label for="webSite">Website URL</label>
+					<input
+						type="URL"
+						name="websiteURL"
+						id="WebsiteURL"
+						placeholder="Type your Website URL"
+						required />
+				</div>
+
+				<button type="submit">Submit</button>
+			</form>
+
+			<!-- ERROR / SUCCESS MESSAGE -->
+			<div class="message_container">
+				<h3 id="message">Don't Hesitate</h3>
+			</div>
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>

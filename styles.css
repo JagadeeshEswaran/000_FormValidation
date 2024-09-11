@@ -1,0 +1,106 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    margin: 0;
+    min-height: 100svh;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #c4d4c0;
+    letter-spacing: 2px;
+
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+.form_container {
+    width: 480px;
+    height: 700px;
+    background: rgba(245, 245, 245, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    border-radius: 8px;
+    box-shadow: rgba(48, 29, 0, 0.4) 0px 5px 30px 5px;
+}
+
+/* FORM CONTAINER */
+form {
+    width: 92%;
+}
+
+.form_group {
+    height: 65px;
+}
+
+.form_group label {
+    position: relative;
+    bottom: 5px;
+    /* padding-right: 5px; */
+}
+
+.form_group input {
+    width: 100%;
+    height: 34px;
+    padding: 5px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+
+    transition: all 0.3s ease;
+}
+
+.form_group input:valid {
+    border: 2px solid lawngreen;
+}
+
+.form_group input:invalid {
+    border: 2px solid crimson;
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(255, 158, 40);
+    border: none;
+    border-radius: 4px;
+    height: 50px;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    margin-top: 5px;
+
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    filter: brightness(90%);
+    transform: translateY(4px);
+}
+
+button:focus {
+    outline: none;
+}
+
+.message_container {
+    border: 1px solid gold;
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    color: goldenrod;
+}
